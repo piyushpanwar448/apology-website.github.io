@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Sweet Memories 💭</title>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(#ffd6e8, #ffe4ec);
+        overflow-x: hidden;
+    }
+    section {
+        min-height: 100vh;
+        text-align: center;
+        padding: 20px;
+    }
+    h1 {
+        font-family: 'Sacramento', cursive;
+        font-size: 3rem;
+        color: #ff4e88;
+    }
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    .scroll-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding: 10px;
+        scroll-behavior: smooth;
+    }
+    .scroll-container img {
+        height: 200px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        flex-shrink: 0;
+        transition: transform 0.3s;
+    }
+    .scroll-container img:hover {
+        transform: scale(1.05);
+    }
+    .btn {
+        background: #ff4e88;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin-top: 20px;
+    }
+    .btn:hover {
+        background: #e33c75;
+    }
+</style>
+</head>
+<body>
+
+<section>
+    <h1>Our Sweet Memories 💭</h1>
+    <p>Remember our crazy laughs, silly talks, and fun moments?  
+    They are my happiest days 💕  
+    I want to make more with you 🥹</p>
+
+    <div class="scroll-container">
+        <img src="images/memory1.png" alt="Memory 1">
+        <img src="images/memory2.png" alt="Memory 2">
+        <img src="images/memory3.png" alt="Memory 3">
+        <img src="images/memory4.png" alt="Memory 4">
+        <img src="images/memory5.png" alt="Memory 5">
+    </div>
+
+    <a href="page-3.html"><button class="btn">Next ➡️</button></a>
+</section>
+
+</body>
+</html>

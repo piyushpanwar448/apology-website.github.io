@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry 🥺</title>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(#ffe4ec, #ffd6e8);
+        overflow: hidden;
+    }
+    section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    h1 {
+        font-family: 'Sacramento', cursive;
+        font-size: 3rem;
+        color: #ff4e88;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1.2rem;
+        max-width: 500px;
+    }
+    img {
+        max-width: 300px;
+        margin: 20px 0;
+    }
+    .btn {
+        background: #ff4e88;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .btn:hover {
+        background: #e33c75;
+    }
+    /* Floating hearts */
+    .heart {
+        position: fixed;
+        bottom: -10px;
+        color: #ff4e88;
+        font-size: 20px;
+        animation: floatUp 5s infinite ease-in;
+    }
+    @keyframes floatUp {
+        0% { transform: translateY(0) rotate(0); opacity: 1; }
+        100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    }
+</style>
+</head>
+<body>
+
+<section>
+    <h1>Bestie, I’m Really Sorry 🥺</h1>
+    <p>You are my most precious person 💖  
+    I never meant to hurt you… Please forgive me 🙏  
+    Your smile means the world to me, and I miss it 💕</p>
+    <img src="images/sorry.gif" alt="Sorry Image">
+    <a href="page-2.html"><button class="btn">Next ➡️</button></a>
+</section>
+
+<script>
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+    heart.innerHTML = '💖';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+}
+setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>

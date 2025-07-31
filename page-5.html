@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Heart Beats for You ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(#ffe4ec, #ffd6e8);
+        overflow: hidden;
+    }
+    section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    h1 {
+        font-family: 'Sacramento', cursive;
+        font-size: 3rem;
+        color: #ff4e88;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1.2rem;
+        max-width: 500px;
+    }
+    img {
+        max-width: 250px;
+        margin: 20px 0;
+    }
+    .btn {
+        background: #ff4e88;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .btn:hover {
+        background: #e33c75;
+    }
+    /* Floating hearts */
+    .heart {
+        position: fixed;
+        bottom: -10px;
+        color: #ff4e88;
+        font-size: 20px;
+        animation: floatUp 5s infinite ease-in;
+    }
+    @keyframes floatUp {
+        0% { transform: translateY(0) rotate(0); opacity: 1; }
+        100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    }
+</style>
+</head>
+<body>
+
+<section>
+    <h1>My Heart Beats for You ❤️</h1>
+    <p>No matter what, you’ll always be my one and only bestie 💖  
+    I promise to never make you sad again 🥹  
+    Let’s always stay together 💕</p>
+    <img src="images/Heart.gif" alt="Heart Image">
+    <a href="yes-page.html"><button class="btn">Final Surprise 🎉</button></a>
+</section>
+
+<script>
+// Floating hearts
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+    heart.innerHTML = '💖';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+}
+setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>
